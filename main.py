@@ -32,6 +32,7 @@ class Handler:
             dialog.destroy()
         else:
             entry.props.text = str(value)
+            entry.set_position(entry.props.text_length)
 
     def validate_insert(self, obj, text, text_length, position):
         if re.match('[^\d\.\*\/\-\+]', text):
